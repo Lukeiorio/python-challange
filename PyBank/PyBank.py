@@ -1,4 +1,12 @@
-PyBank folder
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Aug 22 12:06:06 2018
+
+@author: lukeiorio
+"""
+
+
 import csv
 import os 
 
@@ -67,3 +75,8 @@ print(output)
 
 with open(file_to_output,"w") as txt_file:
   txt_file.write(output)
+    
+        
+
+      
+            

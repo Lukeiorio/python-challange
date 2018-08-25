@@ -1,3 +1,11 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Aug 24 23:59:35 2018
+
+@author: lukeiorio
+"""
+
 #PyPoll
 
 import os
@@ -39,4 +47,5 @@ with open (file_output, 'w') as file:
     file.write("_______________________")
     file.write("Winner: " + max(dictCountCand,key=dictCountCand.get) )
     file.write("_______________________")
+
 
