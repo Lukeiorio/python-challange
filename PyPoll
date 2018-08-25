@@ -1,9 +1,13 @@
-PyPoll Folder
+#PyPoll
+
 import os
 import csv
 from collections import Counter
 
 csv_file_path = os.path.join("election_data.csv")
+file_output = "election_summary.txt"
+
+
 
 
 VoterID = []
@@ -23,12 +27,16 @@ totVotes = len(Candidate)
 dictCountCand = Counter(Candidate)
 
 
-print("Election Results")
-print("_______________________")
-print("Total Votes: "+str(len(Candidate)))
-print("_______________________")
-for x in dictCountCand.keys():
-	print(x+": "+"{:5.2f}".format(100.*dictCountCand[x]/float(totVotes))+"%"+" ("+str(dictCountCand[x])+")" )
-print("_______________________")
-print("Winner: " + max(dictCountCand,key=dictCountCand.get) )
-print("_______________________")
+with open (file_output, 'w') as file:
+
+
+    file.write("Election Results")
+    file.write("_______________________")
+    file.write("Total Votes: "+str(len(Candidate)))
+    file.write("_______________________")
+    for x in dictCountCand.keys():
+        file.write(x+": "+"{:5.2f}".format(100.*dictCountCand[x]/float(totVotes))+"%"+" ("+str(dictCountCand[x])+")" )
+    file.write("_______________________")
+    file.write("Winner: " + max(dictCountCand,key=dictCountCand.get) )
+    file.write("_______________________")
+
