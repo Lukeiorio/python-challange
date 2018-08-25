@@ -3,6 +3,7 @@ import csv
 import os 
 
 csv_file= os.path.join("budget_data.csv")
+file_to_output = ("budget_data.txt")
 
 
 
@@ -63,3 +64,6 @@ output = (
     f"Greatest Decrease in Revenue: {greatest_decrease[0]} (${greatest_decrease[1]})\n")     
         
 print(output) 
+
+with open(file_to_output,"w") as txt_file:
+  txt_file.write(output)
